@@ -30,9 +30,6 @@ print("N:",x," End number:",time_end," Start at:",time.strftime("%Y-%m-%d %H:%M:
 
 for x in range(0, time_end):
     current_posit = win32api.GetCursorPos()
-    # win32api.SetCursorPos((current_posit[0] + 100 ,current_posit[1] + 1))
-    # win32api.SetCursorPos((current_posit[0] - 100 ,current_posit[1] + 1))
-    # win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,current_posit[0],current_posit[1],0,0)
     pyautogui.hotkey("ctrlright")
     x=x+1
     time.sleep(routine)
