@@ -42,7 +42,8 @@ x = 0
 y = 0
 
 # Show the starting information
-print("N:",x," End number:",time_end," Start at:",time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())," End estimated at",time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(secs)),sep=" ")
+print("Program will run:", time_end, "times | Start at:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())," | End estimated at:",time.strftime("%Y-%m-%d %H:%M:%S", 
+      time.localtime(secs))," | Program duration:", duration_hour, "hours", sep=" ")
 
 
 for x in range(0, time_end):
@@ -60,6 +61,10 @@ for x in range(0, time_end):
     
     x = x + 1
     
-    print("N:",x,"Active times: ", y," Time now:",time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())," Time passed:",int(((time.time()-starttime)/60)/60),"h",int(((time.time()-starttime)/60)%60),"m",int((time.time()-starttime)%60),sep=" ")
+    print("N:",x,"|Active times:", y,"times |Program active pct", int((y/x) * 100),"% |Time now:",time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
+          " |Time passed:",int(((time.time()-starttime)/60)/60),"h",int(((time.time()-starttime)/60)%60),"m",int((time.time()-starttime)%60)," | Working hour around: ", 
+          int((x-y)*4.5/60), "hours", sep=" ")
 
-print("Program runs:",x,"times | Active times: ", y, "times | Active pct", int(y/x * 100),"% | End Time:",time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())," | Total time passed:",int(((time.time()-starttime)/60)/60),"h",int(((time.time()-starttime)/60)%60),"m",int((time.time()-starttime)%60),sep=" ")
+print("Program runs:",x,"times | Program active times: ", y, "times | Activity pct", int((1-y/x) * 100),"% | End Time:",time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
+      " | Total time passed:",int(((time.time()-starttime)/60)/60),"h",int(((time.time()-starttime)/60)%60),"m",int((time.time()-starttime)%60), " | Working hour around: ", 
+      int((x-y+1)*4.5/60), "hours", sep=" ")
