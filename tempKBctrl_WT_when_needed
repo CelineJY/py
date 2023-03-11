@@ -35,8 +35,8 @@ x = 0
 y = 0
 
 # Show the starting information
-print("Program will run:", time_end, "times | Start at:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())," | End estimated at:",time.strftime("%Y-%m-%d %H:%M:%S", 
-      time.localtime(secs))," | Program duration:", duration_hour, "hours", sep=" ")
+print("Program will run:", time_end, "times | Start at:", time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),"| End estimated at:",time.strftime("%Y-%m-%d %H:%M:%S", 
+      time.localtime(secs)),"| Program duration:", duration_hour, "hours", sep=" ")
 
 
 for x in range(0, time_end):
