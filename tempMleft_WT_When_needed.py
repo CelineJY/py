@@ -55,7 +55,7 @@ for x in range(0, time_end):
     
     print("N:",x,"|Active times:", y,"times |Program active pct", int((y/x) * 100),"% |Time now:",time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
           " |Time passed:",int(((time.time()-starttime)/60)/60),"h",int(((time.time()-starttime)/60)%60),"m",int((time.time()-starttime)%60)," | Working hour around: ", 
-          int((x-y)*4.5/60), "hours", sep=" ")
+          int((x-y+1)*4.5/60), "hours", sep=" ")
 
 print("Program runs:",x,"times | Program active times: ", y, "times | Activity pct", int((1-y/x) * 100),"% | End Time:",time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()),
       " | Total time passed:",int(((time.time()-starttime)/60)/60),"h",int(((time.time()-starttime)/60)%60),"m",int((time.time()-starttime)%60), " | Working hour around: ", 
