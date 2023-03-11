@@ -2,7 +2,7 @@
 """
 Created on Tue Mar  7 09:36:06 2023
 
-@author: A496738
+@author: Celine
 """
 
 # -*- coding: utf-8 -*-
@@ -15,7 +15,6 @@ Created on Fri Jan 20 09:33:12 2023
 import win32api, win32con
 import sched, time, os
 
-import pyautogui
 
 # Specify the duration of the programme
 duration_hour = 10
@@ -51,12 +50,12 @@ for x in range(0, time_end):
     
     # win32api.SetCursorPos((current_posit[0] + 100 ,current_posit[1] + 1))
     # win32api.SetCursorPos((current_posit[0] - 100 ,current_posit[1] + 1))
-    # win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,current_posit[0],current_posit[1],0,0)
+    
         
     time.sleep(routine)
     
     if current_posit == win32api.GetCursorPos() or x == 0:
-        pyautogui.hotkey("ctrlright")
+        win32api.mouse_event(win32con.MOUSEEVENTF_LEFTUP,current_posit[0],current_posit[1],0,0)
         y = y + 1
     
     x = x + 1
