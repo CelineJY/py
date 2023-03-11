@@ -5,13 +5,6 @@ Created on Tue Mar  7 09:36:06 2023
 @author: Celine
 """
 
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Jan 20 09:33:12 2023
-
-@author: A496738
-"""
-
 import win32api, win32con
 import sched, time, os
 
